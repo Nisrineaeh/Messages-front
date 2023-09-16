@@ -1,0 +1,11 @@
+<form (submit)="onSubmit()" [formGroup]="signupForm">
+    <label>
+        Nom d'utilisateur:
+        <input type="text" formControlName="username">
+    </label>
+    <label>
+        Mot de passe:
+        <input type="password" formControlName="password">
+    </label>
+    <button type="submit" [disabled]="!signupForm.valid">Inscription</button>
+</form>

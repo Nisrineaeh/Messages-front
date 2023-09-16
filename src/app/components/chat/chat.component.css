@@ -1,0 +1,165 @@
+/* 
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-list {
+  max-height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.my-message, .other-message {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  max-width: 70%;
+}
+
+.my-message {
+  background-color: #b3e0ff;  
+  align-self: flex-end;
+  margin-left: 30%; 
+}
+
+.other-message {
+  background-color: #b3ffb3;
+  align-self: flex-start;
+  margin-right: 30%; 
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-message, .other-message {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 20px;
+  width: 70%; 
+}
+
+.my-message {
+  background-color: #b3e0ff;  
+  margin-left: auto; 
+}
+
+.other-message {
+  background-color: #b3ffb3; 
+  margin-right: auto; 
+} */
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* légère couleur de fond pour distinguer la zone de chat */
+}
+
+.message-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ffffff; /* Fond blanc pour la zone des messages */
+}
+
+.message {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.my-message, .other-message {
+  padding: 8px 12px;
+  border-radius: 20px;
+  max-width: 70%; /* Définir une largeur maximale pour les messages */
+  word-break: break-word; /* Cela permet de s'assurer que les longs mots ne dépassent pas de la bulle */
+}
+
+.my-message {
+  background-color: #b3e0ff; /* Bleu clair */
+  margin-left: auto; /* Pousser vers la droite */
+}
+
+.other-message {
+  background-color: #b3ffb3; /* Vert clair */
+  margin-right: auto; /* Pousser vers la gauche */
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd; /* Ajouter une ligne supérieure pour séparer le formulaire de la liste des messages */
+  padding-top: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none; /* Enlever la bordure par défaut des champs de saisie lorsqu'ils sont en focus */
+}
+
+input[type="text"]:focus {
+  border-color: #007BFF; /* Change border color to blue when input is focused */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #0056b3;
+}

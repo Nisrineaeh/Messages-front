@@ -1,0 +1,16 @@
+<div class="chat-container">
+    <div class="message-list">
+        <div class="message" *ngFor="let message of messages">
+            <div *ngIf="message.senderId === currentUser.id" class="my-message">
+                {{ message.content }}
+            </div>
+            <div *ngIf="message.senderId !== currentUser.id" class="other-message">
+                {{ message.content }}
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="messageForm" (ngSubmit)="sendMessage(messageForm.get('newMessage')?.value, otherUserId)">
+        <input type="text" formControlName="newMessage" placeholder="Type a message...">
+        <button type="submit">Send</button>
+    </form>
+</div>
